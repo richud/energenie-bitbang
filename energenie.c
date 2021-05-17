@@ -1,5 +1,6 @@
 /*
-Depends libftdi-dev libftdi1 libusb-dev
+Depends libftdi and libusb
+sudo apt install libftdi1 libusb-dev libftdi1-dev
 
 Energenie remote code sender via FTDI bitbang
 by Richud.com 2015
@@ -8,7 +9,7 @@ max 24 bit number 111111111111111111111111  = 16'777'215
  on 12345 000000000011000000111001
 off 12344 000000000011000000111000 ,always one less
 
-Remote '4514' code table
+Remote '4514' (sticker on plugs) code table
 	ON			OFF
 1	Received 12363535	Received 12363534
 2	Received 12363527	Received 12363526
@@ -19,7 +20,7 @@ ALL	Received 12363533	Received 12363532
 
 Default pin codes, 0x00 all off, others OR'd for on.
 #define PIN_TX  0x01
-#define PIX_RX  0x02
+#define PIN_RX  0x02
 #define PIN_RTS 0x04
 #define PIN_CTS 0x08
 #define PIN_DTR 0x10
@@ -31,6 +32,7 @@ Default pin codes, 0x00 all off, others OR'd for on.
 #include <time.h>
 #include <stdio.h>
 #include <limits.h>
+#include <stdlib.h>
 #include <ftdi.h>
 
 /* DEFINE are only things that should be changed */
