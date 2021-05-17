@@ -8,6 +8,7 @@ See wiki page for more info
 
 https://www.richud.com/wiki/FT232R_BitBang_433MHz_Energenie_Power_Socket
 
+![Screenshot](pics/FT232-FS1000A-joined.jpeg)
 
 Requirements
 ------------
@@ -17,6 +18,8 @@ An Energenie or compatible power socket.
 A 433MHz transmitter such as the ubiquitous FS1000A (eBay, ~ £1)
 
 A USB to TTL FT232RL adapter (eBay, ~ £2)
+
+![Screenshot](pics/FT232RL-board.jpeg)
 
 Compile
 -------
@@ -68,7 +71,9 @@ Remote '4514' (sticker on plugs) code table
 4	Received 12363523	Received 12363522
 ALL	Received 12363533	Received 12363532
 ```
+![Screenshot](pics/Decode.png)
 
+![Screenshot](pics/Energenie-remote-buspirate.jpeg)
 
 [serial] is the serial of your adapter so you can run multiple ones at the same time, e.g. A400fqa6
 ```
@@ -91,3 +96,9 @@ Just revisited this again after 5 years to turn a fan on and off to dry a wall/f
 Completely reliable and range is about same as wifi at least!
 
 Perhaps all the codes start 1236 and just cycle through last 4 digits with a bash script trying each one in turn if you dont want to decode your rwmote the hard way?
+
+Finished Article
+----------------
+![Screenshot](pics/Heatshrunk-ftdi.jpeg)
+
+(with crappy looking but super thick heatshrink)
